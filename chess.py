@@ -70,80 +70,81 @@ class chess():
 
     def image(self):                               # The image of the piece
         self.image_code = [("white","pawn","pyimage1"),("black","pawn","pyimage2"),("white","horse","pyimage3"),("black","horse","pyimage4"),("white","bishop","pyimage5"),("black","bishop","pyimage6"),("white","rook","pyimage7"),("black","rook","pyimage8"),("white","queen","pyimage9"),("black","queen","pyimage10"),("white","king","pyimage11"),("black","king","pyimage12")]
-        wpawn = Image.open('white_pawn.png')
+        wpawn = Image.open('./Images/white_pawn.png')
         self.wpawn = ImageTk.PhotoImage(wpawn)
         for i in range(64):
             if self.coords[i][1]==6:
                 self.coords[i][0].configure(image=self.wpawn,height=70,width=70)           # Creating the initial case for board
 
-        bpawn = Image.open('black_pawn.png')
+        bpawn = Image.open('./Images/black_pawn.png')
         self.bpawn = ImageTk.PhotoImage(bpawn)
         for i in range(64):
             if self.coords[i][1]==1:
                 self.coords[i][0].configure(image=self.bpawn,height=70,width=70)
                 print(self.coords[i][0]['image'])
 
-        whorse = Image.open('white_knight.png')
+        whorse = Image.open('./Images/white_knight.png')
         #whorse1 = whorse.resize((70,90))
         self.whorse=ImageTk.PhotoImage(whorse)
         for i in range(64):
             if self.coords[i][1]==7 and self.coords[i][2]==1 or self.coords[i][1]==7 and self.coords[i][2]==6:
                 self.coords[i][0].configure(image=self.whorse,height=70,width=70)
 
-        bhorse = Image.open('black_knight.png')
+        bhorse = Image.open('./Images/black_knight.png')
         self.bhorse = ImageTk.PhotoImage(bhorse)
         for i in range(64):
             if self.coords[i][1]==0 and self.coords[i][2]==1 or self.coords[i][1]==0 and self.coords[i][2]==6:
                 self.coords[i][0].configure(image=self.bhorse,height=70,width=70)
 
-        wbishop = Image.open('white_bishop.png')
+        wbishop = Image.open('./Images/white_bishop.png')
         self.wbishop = ImageTk.PhotoImage(wbishop)
         for i in range(64):
             if self.coords[i][1]==7 and self.coords[i][2]==2 or self.coords[i][1]==7 and self.coords[i][2]==5:
                 self.coords[i][0].configure(image=self.wbishop,height=70,width=70)
 
-        bbishop = Image.open('black_bishop.png')
+        bbishop = Image.open('./Images/black_bishop.png')
         #bbishop1 = bbishop.resize((70,90))
         self.bbishop = ImageTk.PhotoImage(bbishop)
         for i in range(64):
             if self.coords[i][1]==0 and self.coords[i][2]==2 or self.coords[i][1]==0 and self.coords[i][2]==5:
                 self.coords[i][0].configure(image=self.bbishop,height=70,width=70)
 
-        wrook = Image.open('white_rook.png')
+        wrook = Image.open('./Images/white_rook.png')
         self.wrook = ImageTk.PhotoImage(wrook)
         for i in range(64):
             if self.coords[i][1]==7 and self.coords[i][2]==0 or self.coords[i][1]==7 and self.coords[i][2]==7:
                 self.coords[i][0].configure(image=self.wrook,height=70,width=70)
 
-        brook = Image.open('black_rook.png')
+        brook = Image.open('./Images/black_rook.png')
         self.brook = ImageTk.PhotoImage(brook)
         for i in range(64):
             if self.coords[i][1]==0 and self.coords[i][2]==0 or self.coords[i][1]==0 and self.coords[i][2]==7:
                 self.coords[i][0].configure(image=self.brook,height=70,width=70)
 
-        wqueen = Image.open('white_queen.png')
+        wqueen = Image.open('./Images/white_queen.png')
         self.wqueen = ImageTk.PhotoImage(wqueen)
         for i in range(64):
             if self.coords[i][1]==7 and self.coords[i][2]==3:
                 self.coords[i][0].configure(image=self.wqueen,height=70,width=70)
         
-        bqueen = Image.open('black_queen.png')
+        bqueen = Image.open('./Images/black_queen.png')
         self.bqueen = ImageTk.PhotoImage(bqueen)
         for i in range(64):
             if self.coords[i][1]==0 and self.coords[i][2]==3:
                 self.coords[i][0].configure(image=self.bqueen,height=70,width=70)
 
-        wking = Image.open('white_king.png')
+        wking = Image.open('./Images/white_king.png')
         self.wking = ImageTk.PhotoImage(wking)
         for i in range(64):
             if self.coords[i][1]==7 and self.coords[i][2]==4:
                 self.coords[i][0].configure(image=self.wking,height=70,width=70)
 
-        bking = Image.open('black_king.png')
+        bking = Image.open('./Images/black_king.png')
         self.bking = ImageTk.PhotoImage(bking)
         for i in range(64):
             if self.coords[i][1]==0 and self.coords[i][2]==4:
                 self.coords[i][0].configure(image=self.bking,height=70,width=70)
+
         
         for i in range(64):
             self.coords_dic[i]=self.coords[i][0]['image']
